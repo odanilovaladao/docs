@@ -1,0 +1,35 @@
+/* Estilos para highlight de elementos */
+.cursor-element-highlight {
+  outline: 2px solid #007acc !important;
+  outline-offset: 2px !important;
+  background-color: rgba(0, 122, 204, 0.1) !important;
+  position: relative !important;
+}
+
+.cursor-element-highlight::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #007acc;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 999998;
+}
+
+/* Tooltip styles */
+#cursor-element-tooltip {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #555;
+}
+
+#cursor-element-tooltip div {
+  margin: 2px 0;
+}
+
+#cursor-element-tooltip div:first-child {
+  font-weight: bold;
+  color: #007acc;
+}
